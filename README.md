@@ -65,3 +65,9 @@ To deploy this project run
 
 ![App Screenshot](https://i.imgur.com/T4UyuAs.jpg)
 
+## Optimizations
+- Add Snapchat URLs
+- Add javascript pixel events
+- Add toggle dark/light modes
+- Add teams/collaborator function for affiliate teams
+- Work on deduplication for s2s events
