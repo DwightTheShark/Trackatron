@@ -58,10 +58,10 @@ To deploy this project run
 
 ## Demo
 
-![Demo gif](https://imgur.com/T4UyuAs)
+![Demo gif](https://i.imgur.com/oRxoQvo.gif)
 
 
 ## Screenshots
 
-![App Screenshot](https://imgur.com/T4UyuAs)
+![App Screenshot](https://i.imgur.com/T4UyuAs.jpg)
 
