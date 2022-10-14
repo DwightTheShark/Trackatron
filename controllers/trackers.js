@@ -37,6 +37,11 @@ module.exports = {
             let url = "https://graph.facebook.com/v13.0/" + record.fb_pixel_id + "/events" + "?access_token=" + record.fb_token
             console.log(url)
             let ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress
+            var page_url = "https://trackaton.com/trackers/fbtrack/"+req.params.trackerId
+
+            if (req.query.url) {
+                page_url = req.query.url
+            }
 
             let payload = {
                 'event_name': 'Lead',
@@ -45,7 +50,7 @@ module.exports = {
                     'client_ip_address': ip,
                     'client_user_agent': req.get('User-Agent')
                 },
-                'event_source_url': "https://trackatron.com/trackers/fbtrack/" + req.params.trackerId,
+                'event_source_url': page_url,
                 'action_source': 'website'
             }
 
@@ -83,6 +88,11 @@ module.exports = {
             let record = await TTTracker.findOne({ _id: req.params.trackerId })
             let url = "https://business-api.tiktok.com/open_api/v1.2/pixel/track/"
             let ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress
+            var page_url = "https://trackatron.com/trackers/tttrackers/" + req.params.trackerId
+
+            if (req.query.url) {
+                page_url = req.query.url
+            }
 
             let payload = {
                 'pixel_code': record.tt_pixel_id,
@@ -92,7 +102,7 @@ module.exports = {
                     'ip': ip,
                     'user_agent': req.get('User-Agent'),
                     'page': {
-                        'url': "https://trackatron.com/trackers/tttrack/" + req.params.trackerId,
+                        'url': page_url,
                         'referrer': req.get('Referer')
                     }
                 }
