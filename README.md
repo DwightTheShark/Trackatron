@@ -65,6 +65,12 @@ To deploy this project run
 
 ![App Screenshot](https://i.imgur.com/T4UyuAs.jpg)
 
+## Add-ons
+# To create a custom originating domain
+- After generating the postback url with your token and pixel id, ad:
+```?url="insert_url_here"```
+to the end of the link, where "insert_url_here" is replaced by your originating custom domain.
+
 ## Optimizations
 - Add Snapchat URLs
 - Add javascript pixel events
